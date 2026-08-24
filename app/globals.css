@@ -1,0 +1,37 @@
+@import '../src/design-system/tokens.css';
+
+/* ==========================================================================
+   Global base styles
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  color: var(--color-foreground);
+  background: var(--color-background);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+/* Preserve LTR for code even under RTL */
+[dir='rtl'] code,
+[dir='rtl'] pre,
+[dir='rtl'] kbd {
+  direction: ltr;
+  text-align: left;
+}

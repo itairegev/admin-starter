@@ -1,0 +1,55 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-foreground);
+}
+
+.selectWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  appearance: none;
+  padding: var(--input-padding-y) var(--input-padding-x);
+  padding-inline-end: var(--space-8);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  color: var(--color-foreground);
+  background: var(--color-input);
+  border: 1px solid var(--color-input-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+  width: 100%;
+  cursor: pointer;
+}
+
+.select:hover:not(:disabled) {
+  border-color: var(--color-primary-light);
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: var(--focus-ring);
+}
+
+.select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.chevron {
+  position: absolute;
+  inset-inline-end: var(--space-3);
+  pointer-events: none;
+  color: var(--color-foreground-muted);
+  display: flex;
+}

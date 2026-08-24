@@ -1,0 +1,237 @@
+/**
+ * Design Tokens
+ *
+ * Extracted from the source admin design system (Figma: blue + warm beige).
+ * Light theme is the default; dark theme overrides via [data-theme='dark'].
+ *
+ * Layers merged from the source project:
+ *   1. Base scale  — spacing, typography, radii, shadows, transitions, z-index
+ *   2. Brand layer — primary blue, warm beige neutrals, 6-color tag system
+ */
+
+:root {
+  /* ===== Primary — Blue scale ===== */
+  --color-primary: #4d6cf5;
+  --color-primary-light: #6b85f7;
+  --color-primary-dark: #3855d3;
+  --color-primary-bg: #edf0ff;
+  --color-primary-bg-hover: #d8ddf4;
+  --color-primary-foreground: #ffffff;
+
+  /* ===== Neutral — Warm beige + black scale ===== */
+  --color-gray-900: #131313;
+  --color-gray-800: #333333;
+  --color-gray-700: #222222;
+  --color-gray-500: #999999;
+  --color-gray-400: #999999;
+  --color-gray-300: #cccccc;
+  --color-gray-200: #eceadf;
+  --color-gray-100: #f8f7f3;
+  --color-gray-50: #f8f7f3;
+
+  /* ===== Status ===== */
+  --color-success: #00d181;
+  --color-success-light: #b3f0db;
+  --color-success-dark: #007f4e;
+  --color-warning: #eab308;
+  --color-warning-light: #fef9c3;
+  --color-warning-dark: #a16207;
+  --color-error: #ea3635;
+  --color-error-light: #f9c0c0;
+  --color-error-dark: #8c2020;
+  --color-info: #3b82f6;
+  --color-info-light: #dbeafe;
+  --color-info-dark: #1d4ed8;
+
+  /* ===== Semantic — Foreground ===== */
+  --color-foreground: #131313;
+  --color-foreground-secondary: #333333;
+  --color-foreground-tertiary: #999999;
+  --color-foreground-muted: #999999;
+  --color-foreground-subtle: #cccccc;
+
+  /* ===== Semantic — Background ===== */
+  --color-background: #f8f7f3;
+  --color-background-secondary: #f8f7f3;
+  --color-background-tertiary: #eceadf;
+  --color-background-hover: #eceadf;
+
+  /* ===== Semantic — Border ===== */
+  --color-border: #eceadf;
+  --color-border-light: #f8f7f3;
+  --color-border-dark: #cccccc;
+
+  /* ===== Card ===== */
+  --color-card: #ffffff;
+  --color-card-border: #eceadf;
+
+  /* ===== Input ===== */
+  --color-input: #ffffff;
+  --color-input-border: #eceadf;
+  --color-input-focus: var(--color-primary);
+  --color-input-placeholder: #999999;
+  --focus-ring: 0 0 0 2px rgba(77, 108, 245, 0.15);
+
+  /* ===== Sidebar ===== */
+  --color-sidebar-bg: #f8f7f3;
+  --color-sidebar-border: #eceadf;
+  --color-sidebar-text: #333333;
+
+  /* ===== Misc ===== */
+  --color-avatar-bg: #d8ddf4;
+  --color-notification: #ff0004;
+  --color-icon-line: #ccd2e3;
+  --color-icon-fill: #222222;
+  --color-overlay: rgba(0, 0, 0, 0.45);
+
+  /* ===== Tag colors — 6-color system ===== */
+  --tag-blue-text: #3855d3;
+  --tag-blue-stroke: #3855d3;
+  --tag-blue-bg: #edf0ff;
+  --tag-teal-text: #4ec4e4;
+  --tag-teal-stroke: #4ec4e4;
+  --tag-teal-bg: #effbff;
+  --tag-green-text: #49ce6a;
+  --tag-green-stroke: #49ce6a;
+  --tag-green-bg: #effff3;
+  --tag-lilac-text: #8169c5;
+  --tag-lilac-stroke: #8169c5;
+  --tag-lilac-bg: #f7f4ff;
+  --tag-orange-text: #f19800;
+  --tag-orange-stroke: #f19800;
+  --tag-orange-bg: #fff5e5;
+  --tag-pink-text: #d05eac;
+  --tag-pink-stroke: #d05eac;
+  --tag-pink-bg: #fff2fb;
+
+  /* ===== Spacing scale ===== */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* ===== Layout ===== */
+  --page-padding-x: var(--space-6);
+  --page-padding-y: var(--space-6);
+  --page-max-width: 1600px;
+  --content-max-width: 1200px;
+  --card-padding: var(--space-6);
+  --card-gap: var(--space-4);
+  --section-spacing: var(--space-8);
+  --input-padding-y: var(--space-2);
+  --input-padding-x: var(--space-3);
+  --button-padding-y: var(--space-2);
+  --button-padding-x: var(--space-4);
+  --header-height: 64px;
+  --sidebar-width: 200px;
+  --sidebar-width-collapsed: 80px;
+
+  /* ===== Typography ===== */
+  --font-sans: var(--font-sans-latin), var(--font-sans-hebrew), -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --text-heading-1: var(--font-size-3xl);
+  --text-heading-2: var(--font-size-2xl);
+  --text-heading-3: var(--font-size-xl);
+  --text-heading-4: var(--font-size-lg);
+  --text-body: var(--font-size-base);
+  --text-small: var(--font-size-sm);
+  --text-tiny: var(--font-size-xs);
+
+  /* ===== Border radius ===== */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 10px;
+  --radius-full: 999px;
+
+  /* ===== Shadows (warm, near-black base) ===== */
+  --shadow-sm: 0 1px 2px 0 rgba(19, 19, 19, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(19, 19, 19, 0.06), 0 2px 4px -2px rgba(19, 19, 19, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(19, 19, 19, 0.06), 0 4px 6px -4px rgba(19, 19, 19, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(19, 19, 19, 0.08), 0 8px 10px -6px rgba(19, 19, 19, 0.04);
+
+  /* ===== Transitions ===== */
+  --transition-fast: 0.1s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+
+  /* ===== Z-index ===== */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+}
+
+/* ===== Dark theme ===== */
+[data-theme='dark'] {
+  --color-background: #141414;
+  --color-background-secondary: #1f1f1f;
+  --color-background-tertiary: #262626;
+  --color-background-hover: #303030;
+
+  --color-foreground: #e5e7eb;
+  --color-foreground-secondary: #d1d5db;
+  --color-foreground-tertiary: #9ca3af;
+  --color-foreground-muted: #9ca3af;
+  --color-foreground-subtle: #6b7280;
+
+  --color-border: #303030;
+  --color-border-light: #262626;
+  --color-border-dark: #404040;
+
+  --color-card: #1f1f1f;
+  --color-card-border: #303030;
+
+  --color-input: #262626;
+  --color-input-border: #404040;
+  --color-input-placeholder: #6b7280;
+
+  --color-sidebar-bg: #1a1a1a;
+  --color-sidebar-border: #303030;
+  --color-sidebar-text: #d1d5db;
+
+  --color-primary-bg: rgba(77, 108, 245, 0.16);
+  --color-primary-bg-hover: rgba(77, 108, 245, 0.28);
+  --color-avatar-bg: #33406e;
+  --color-overlay: rgba(0, 0, 0, 0.65);
+
+  --tag-blue-bg: rgba(56, 85, 211, 0.18);
+  --tag-teal-bg: rgba(78, 196, 228, 0.14);
+  --tag-green-bg: rgba(73, 206, 106, 0.14);
+  --tag-lilac-bg: rgba(129, 105, 197, 0.18);
+  --tag-orange-bg: rgba(241, 152, 0, 0.14);
+  --tag-pink-bg: rgba(208, 94, 172, 0.14);
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.45), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.55), 0 8px 10px -6px rgba(0, 0, 0, 0.45);
+}
